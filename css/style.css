@@ -10,7 +10,7 @@ body { padding-top: 70px;
 }
 
 .videoPlayer{
-    width: 223px;:
+    width: 223px;
 }
 
 #videoTitle{
@@ -21,4 +21,28 @@ body { padding-top: 70px;
 
 .videoHover:hover{
     box-shadow: 10px 10px 50px blue;
+}
+
+#academics{
+}
+
+#sports{
+}
+
+#finearts{
+}
+
+.videoSmallPreview{
+    width: 100%;
+}
+
+.sectionPicture{
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+}
+
+.center{
+    align-content: center;
+    text-align: center;
 }
