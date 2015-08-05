@@ -13,9 +13,7 @@
     <script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
     <link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
    
-    
-    <script src="js/app.js"></script>
-    <script src="js/controller.js"></script>
+    <script src="js/video.js"></script>
 </head>
 
 <body>
@@ -38,7 +36,7 @@
                 <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
                 <li><a href="#">Lifestyle</a></li>
                 <li><a href="#">Sports</a></li>
-                <li><a href="#">Acedemics</a></li>
+                <li><a href="#">Fine Arts</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -55,10 +53,54 @@
     </nav>
     
     <div id="map"></div>
+    <hr>
+    <div id="videoTitle">A day at Roncalli told by past exchange students</div>
+    <div id="dayAtRoncalli" class="row">
+        <div id="juliaDay" class="col-md-3 hidden-sm hidden-xs"> 
+            <a class="videoHover" href="https://www.youtube.com/watch?v=9RXsCamA9jQ">
+                <video id="video1" class="videoPlayer" autoplay loop>
+                    <source src="video/juliaDay.mp4" type="video/mp4">                
+                    Your browser does not support HTML5 video.
+                </video>
+            </a>
+            
+        </div>
+        <div id="gabiDay" class="col-md-3 hidden-sm hidden-xs">
+            <a class="videoHover" href="https://www.youtube.com/watch?v=lzWWB6EqGVs">
+                <video id="video2" class="videoPlayer" autoplay loop>
+                    <source src="video/gabiDay.mp4" type="video/mp4">                
+                    Your browser does not support HTML5 video.
+                </video>
+            </a>
+        </div>
+        <div id="MiroDay" class="col-md-3 hidden-sm hidden-xs">
+            <a class="videoHover" href="https://www.youtube.com/watch?v=O53PcuGPNks">
+                <video id="video3" class="videoPlayer" autoplay loop>
+                    <source src="video/miroDay.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </a>
+            
+        </div>
+        <div id="benDay" class="col-md-3 hidden-sm hidden-xs">
+             <a class="videoHover" href="https://www.youtube.com/watch?v=Oa4aCWs9F-M">
+                <video id="video4" class="videoPlayer" autoplay loop>
+                    <source src="video/benDay.mp4" type="video/mp4">               
+                    Your browser does not support HTML5 video.
+                </video>
+            </a>
+            
+        </div>
+    </div>
+    <hr>
     
     <div class="row">
-    
-        
+        <div id="lifestlye" class="col-sm-4">1
+        </div>
+        <div id="sports" class="col-sm-4">2
+        </div>
+        <div id="finearts" class="col-sm-4">3
+        </div>
     </div>
     
     

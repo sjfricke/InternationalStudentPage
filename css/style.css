@@ -1,8 +1,24 @@
-body { padding-top: 70px; }
+body { padding-top: 70px; 
+        padding-left: 5%;
+        padding-right: 5%;
+    background-color: lightblue;
+    }
 
 #map {
      
     height: 400px; 
-    width: 90%;
-    margin-left: 5%;
+}
+
+.videoPlayer{
+    width: 223px;:
+}
+
+#videoTitle{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.videoHover:hover{
+    box-shadow: 10px 10px 50px blue;
 }
