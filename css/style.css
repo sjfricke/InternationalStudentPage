@@ -1,8 +1,14 @@
 body { padding-top: 70px; 
         padding-left: 5%;
         padding-right: 5%;
-    background-color: lightblue;
+        background-color: azure;
+      
     }
+
+.navbar{
+    background-color: aliceblue;
+}
+
 
 #map {
      
