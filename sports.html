@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="sports">
+
+<head>
+  <title>Roncalli High School</title>
+  
+    <link href="lib/bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="lib/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+    <script src="lib/angular.js"></script>
+    <script src="js/sports.js"></script>
+</head>
+
+<body ng-controller="sportsController as vm">
+
+    <!-- NAVIGATION BAR-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!--Mobile Display-->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Roncalli High School</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li><a href="#">Home<span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Academics</a></li>
+                <li class="active"><a href="#">Sports</a></li>
+                <li><a href="#">Fine Arts</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">History</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">More Info</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+    
+    <div class="row" id="headingSport">
+        <div class="col-xs-1 ">Boys</div>
+        <div class="col-xs-1 ">Girls</div>
+        <div class="col-xs-10 ">Sport</div>
+    </div>
+    
+    <div ng-repeat="sport in vm.sportData">
+        <div class="row sportRow" ng-click="vm.preview($index)">
+            <div class="col-xs-1 boys"><span class="glyphicon glyphicon-ok sportCheck" ng-if="sport.boys == true"></span></div>
+            <div class="col-xs-1 girls"><span class="glyphicon glyphicon-ok sportCheck" ng-if="sport.girls == true"></span></div>
+            <div class="col-xs-2 sportName">{{sport.sport}}<br><img id="sportIcon" ng-src="images/sports/{{sport.icon}}"></div>
+            <div class="col-xs-8 sportPictures"></div>
+        </div>
+        <div ng-show="vm.picked == $index" class="row sportInfo">
+            <div class="col-xs-3">
+                <text class="sportSeason" ng-if="sport.boys == true"><b>Season: </b>{{sport.seasonBoys}}<br></text>
+                <text class="sportSeason" ng-if="sport.girls == true"><b>Season: </b>{{sport.seasonGirls}}</text>
+            </div>
+            <div class="col-xs-9">{{sport.description}}</div>
+        </div>
+    </div>
+    
+    
+    
+
+</body>
+    
+</html>
